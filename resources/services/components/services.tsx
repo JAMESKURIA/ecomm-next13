@@ -10,9 +10,9 @@ export const Services = () => {
                     " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3"
                 }
             >
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
+                {Array.from({ length: 3 }).map((_, i) => (
+                    <ServiceCard key={`service-${i}`} />
+                ))}
             </div>
         </SectionWrapper>
     );

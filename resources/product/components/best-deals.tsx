@@ -9,10 +9,9 @@ export const BestDeals = () => {
                     "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-3"
                 }
             >
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {Array.from({ length: 4 }).map((_, i) => (
+                    <ProductCard key={`product-${i}`} />
+                ))}
             </div>
         </SectionWrapper>
     );
